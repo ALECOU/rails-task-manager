@@ -1,0 +1,15 @@
+<h1>Show</h1>
+
+  <h2>
+    <% if @task.completed == true %>
+        <i class="far fa-check-square">
+      <% else %>
+        <i class="far fa-square"></i>
+      <% end %>
+    <i> <%= @task.title %></i>
+  </h2>
+<p> <%= @task.details %></p>
+
+<p><%= link_to 'Back to my tasks', tasks_path %></p>
+
+<p><%= link_to 'Edit the task', edit_path(@task) %></p>
